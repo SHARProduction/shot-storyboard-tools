@@ -1,0 +1,22 @@
+{
+  "panels": [
+    {
+      "number": 1,
+      "shotId": "s1",
+      "duration": 2,
+      "dialogue": "Open",
+      "assets": [
+        "product"
+      ]
+    },
+    {
+      "number": 2,
+      "shotId": "s2",
+      "duration": 3,
+      "dialogue": "Explain",
+      "assets": [
+        "ui"
+      ]
+    }
+  ]
+}

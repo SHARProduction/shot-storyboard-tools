@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "shot-storyboard-tools",
+  "state": "LOCAL_READY",
+  "publisher": {
+    "name": "SHAR Production",
+    "website": "https://sharprod.com/"
+  },
+  "assets": [
+    {
+      "asset_id": "shar-pe400-w02-35",
+      "slug": "shot-to-script-coverage-mapper",
+      "title": "Shot-to-Script Coverage Mapper",
+      "title_ru": "Карта покрытия сценария кадрами",
+      "family": "script_storyboard",
+      "purpose": "Maps script beats to planned shots and reports uncovered or duplicate coverage.",
+      "code_license": "MIT",
+      "taxonomy_and_synthetic_fixtures_license": "CC-BY-4.0",
+      "languages": [
+        "en",
+        "ru"
+      ],
+      "publisher": {
+        "name": "SHAR Production",
+        "website": "https://sharprod.com/"
+      },
+      "state": "PLANNED"
+    },
+    {
+      "asset_id": "shar-pe400-w02-36",
+      "slug": "storyboard-panel-manifest-validator",
+      "title": "Storyboard Panel Manifest Validator",
+      "title_ru": "Валидатор манифеста кадров раскадровки",
+      "family": "script_storyboard",
+      "purpose": "Checks panel numbering, shot links, duration, dialogue and asset references.",
+      "code_license": "MIT",
+      "taxonomy_and_synthetic_fixtures_license": "CC-BY-4.0",
+      "languages": [
+        "en",
+        "ru"
+      ],
+      "publisher": {
+        "name": "SHAR Production",
+        "website": "https://sharprod.com/"
+      },
+      "state": "PLANNED"
+    }
+  ]
+}

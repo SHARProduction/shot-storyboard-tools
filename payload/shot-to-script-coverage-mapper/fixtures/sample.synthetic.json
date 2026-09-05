@@ -1,0 +1,27 @@
+{
+  "beats": [
+    "problem",
+    "solution",
+    "proof"
+  ],
+  "shots": [
+    {
+      "id": "s1",
+      "beatIds": [
+        "problem"
+      ]
+    },
+    {
+      "id": "s2",
+      "beatIds": [
+        "solution"
+      ]
+    },
+    {
+      "id": "s3",
+      "beatIds": [
+        "proof"
+      ]
+    }
+  ]
+}

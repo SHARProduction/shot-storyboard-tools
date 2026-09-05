@@ -1,0 +1,5 @@
+export const evaluators={
+  'shot-to-script-coverage-mapper': i=>{const beats=[...new Set(i.beats||[])],counts=Object.fromEntries(beats.map(x=>[x,0])),unknown=[];for(const s of i.shots||[])for(const b of s.beatIds||[]){if(b in counts)counts[b]++;else unknown.push({shot:s.id,beat:b})}return{valid:beats.length>0&&!unknown.length&&Object.values(counts).every(Boolean),uncovered:beats.filter(x=>!counts[x]),duplicateCoverage:beats.filter(x=>counts[x]>1),unknown}},
+  'storyboard-panel-manifest-validator': i=>{const p=i.panels||[],nums=p.map(x=>Number(x.number)),issues=[];for(let n=1;n<=p.length;n++)if(!nums.includes(n))issues.push({issue:'missing panel number',number:n});for(const x of p)if(!x.shotId||!(Number(x.duration)>0))issues.push({panel:x.number,issue:'missing shot or duration'});return{valid:p.length>0&&!issues.length&&new Set(nums).size===nums.length,issues,totalDuration:p.reduce((a,x)=>a+Number(x.duration||0),0),assetRefs:[...new Set(p.flatMap(x=>x.assets||[]))]}}
+};
+export function evaluate(slug,input){const fn=evaluators[slug];if(!fn)throw new Error('Unknown tool');return fn(input)}
